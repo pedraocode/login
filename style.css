@@ -1,0 +1,31 @@
+esquerda {
+    flex: 1;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.marketplace img {
+    width: 267.36px;
+    height: 68.65px;
+   margin: 40px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.meio {
+    position: relative;
+    width: 100%;
+    max-width: 755px;
+    text-align: center;
+}
+
+.meio img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
