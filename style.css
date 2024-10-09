@@ -1,4 +1,16 @@
-esquerda {
+.container {
+    margin: auto;
+    max-width: 1366px;
+}
+
+.tudo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #f6f6f6;
+}
+
+.esquerdo {
     flex: 1;
     background-color: #f9f9f9;
     display: flex;
@@ -8,11 +20,14 @@ esquerda {
     padding: 20px;
 }
 
+body {
+    font-family: "Poppins", sans-serif;
+}
+
 .marketplace img {
     width: 267.36px;
-    height: 68.65px;
-   margin: 40px;
-    height: auto;
+    height: auto; /* Removido altura fixa */
+    margin: 40px;
     margin-bottom: 20px;
 }
 
@@ -23,9 +38,228 @@ esquerda {
     text-align: center;
 }
 
+input {
+    border: none;
+    margin: 10px;
+}
+
 .meio img {
     width: 100%;
     height: auto;
     position: relative;
     z-index: 1;
+}
+
+.direita {
+    flex: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    margin: 20px;
+}
+
+.caixa {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    max-width: 563px;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex-grow: 0; /* Permite que a caixa expanda para preencher o espaço disponível */
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4px;
+}
+
+::-webkit-input-placeholder {
+    font-size: 16px;
+}
+.inputs .prim, .inputs .segum {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    border-radius: 4px;
+   
+}
+.terceiro {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+.confirmar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ffffff;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+.input-container, .senha-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ffffff;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+input {
+    border: none;
+    border-bottom: 1px solid #ADADAD;
+}
+.oxente {
+    border: none;
+}
+
+.baixo {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.botaun {
+    background-color: rgb(242, 77, 12);
+    color: #fff;
+    border: none;
+    padding: 10px 5px;
+    border-radius: 10px;
+    margin-bottom: 0; /* Remover a margem inferior para garantir que fique no final */
+    margin-top: 30px; /* Manter a margem superior */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: none;
+}
+
+.botaun button {
+    background: none;
+    border: none;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.butaun {
+    background-color: #fff;
+    border: 1px solid rgb(242, 77, 12);
+    color: rgb(242, 77, 12);
+    padding: 10px 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.butaun button {
+    background: none;
+    border: none;
+    color: rgb(242, 77, 12);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Linha de divisão */
+.line {
+    border: 1px solid rgb(194, 194, 194);
+    width: 550px;
+}
+
+p {
+    color: #666666;
+    width: 367px;
+    height: auto; /* Altura automática */
+}
+
+.okokok {
+    max-width: 120px;
+}
+button {
+    font-size: 16px;
+    text-decoration: none;
+}
+h3 {
+    font-family: 18px;
+}
+h1 {
+    font-family: 24px;
+}
+@media (max-width: 1100px) {
+    .botaun, .butaun {
+        margin-top: 20px;
+    }
+    .a, .b {
+        display: none; /* Esconde elementos não necessários */
+    }
+}
+
+@media (min-width: 767px) {
+    .esquerdo, .direita {
+        width: 50%; /* Divide a tela em 50% */
+    }
+}
+
+@media (max-width: 767px) {
+    .caixa {
+        padding: 20px;
+        height: auto; /* Altura automática para permitir que a caixa expanda */
+    }
+
+    .botaun, .butaun {
+        margin-top: 10px;
+        padding: 15px;
+        width: 100%; /* Garante que o botão não ultrapasse o container */
+        max-width: 400px; /* Define um tamanho máximo para o botão */
+        margin: 0 auto; /* Centraliza o botão */
+    }
+
+    p {
+        width: 100%;
+        text-align: left;
+        margin: 0 auto;
+    }
+
+    /* Ajustes para centralizar a parte direita */
+    .direita {
+        width: 100%; /* Torna a seção direita ocupar toda a largura */
+        display: flex; /* Garante que os elementos internos se comportem corretamente */
+        justify-content: center; /* Centraliza o conteúdo */
+        align-items: center; /* Alinha verticalmente ao centro */
+        margin-top: 20px; /* Margem superior para separar do conteúdo anterior */
+    }
+
+    /* Responsividade de baixo para cima */
+    .inputs {
+        margin-bottom: 10px; /* Ajuste de margem para permitir mais espaço */
+    }
+
+    h3 {
+        margin-top: 20px; /* Aumente a margem superior do h3 para melhor espaçamento */
+    }
+}
+
+/* Responsividade de altura a partir de 1600px */
+@media (min-width: 1600px) {
+    .direita {
+        height: auto; /* Permite que a seção direita se ajuste ao conteúdo */
+        padding: 20px; /* Adiciona espaçamento interno */
+    }
+
+    .caixa {
+        padding: 50px; /* Ajuste o preenchimento na caixa */
+    }
 }
