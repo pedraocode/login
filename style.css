@@ -1,3 +1,4 @@
+/* Estilos básicos */
 .container {
     margin: auto;
     max-width: 1366px;
@@ -18,6 +19,14 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
+    display: flex;                /* Ativa o Flexbox */
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+    align-items: flex-start; 
+}
+
+.a {
+   
+   
 }
 
 body {
@@ -41,6 +50,8 @@ body {
 input {
     border: none;
     margin: 10px;
+    border-bottom: 1px solid #ADADAD;
+    width: 85%;
 }
 
 .meio img {
@@ -61,13 +72,14 @@ input {
 
 .caixa {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
-    max-width: 563px;
+    max-width: 563px; /* Max width to prevent excessive stretching */
     padding: 40px;
     background-color: #fff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     flex-grow: 0; /* Permite que a caixa expanda para preencher o espaço disponível */
+    min-width: 300px; /* Min width to prevent it from becoming too thin */
 }
 
 .inputs {
@@ -79,19 +91,22 @@ input {
 ::-webkit-input-placeholder {
     font-size: 16px;
 }
-.inputs .prim, .inputs .segum {
+
+.inputs .prim,
+.inputs .segum {
     display: flex;
     flex-direction: column;
     margin-bottom: 16px;
     border-radius: 4px;
-   
 }
+
 .terceiro {
     display: flex;
     flex-direction: column;
     margin-bottom: 16px;
     border-radius: 4px;
 }
+
 .confirmar {
     display: flex;
     align-items: center;
@@ -100,7 +115,9 @@ input {
     background-color: #ffffff;
     border-radius: 4px;
 }
-.input-container, .senha-container {
+
+.input-container,
+.senha-container {
     display: flex;
     align-items: center;
     border: 1px solid #ffffff;
@@ -108,10 +125,7 @@ input {
     background-color: #ffffff;
     border-radius: 4px;
 }
-input {
-    border: none;
-    border-bottom: 1px solid #ADADAD;
-}
+
 .oxente {
     border: none;
 }
@@ -130,13 +144,13 @@ input {
     border: none;
     padding: 10px 5px;
     border-radius: 10px;
-    margin-bottom: 0; /* Remover a margem inferior para garantir que fique no final */
+    margin: 0; /* Remover margens para garantir que fique no final */
     margin-top: 30px; /* Manter a margem superior */
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 100%; /* Garante que o botão não ultrapasse o container */
     box-shadow: none;
 }
 
@@ -160,7 +174,7 @@ input {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 100%; /* Garante que o botão não ultrapasse o container */
 }
 
 .butaun button {
@@ -188,42 +202,51 @@ p {
 .okokok {
     max-width: 120px;
 }
+
 button {
     font-size: 16px;
     text-decoration: none;
 }
+
 h3 {
     font-family: 18px;
 }
+
 h1 {
     font-family: 24px;
 }
-@media (max-width: 1100px) {
-    .botaun, .butaun {
-        margin-top: 20px;
-    }
-    .a, .b {
-        display: none; /* Esconde elementos não necessários */
-    }
-}
 
-@media (min-width: 767px) {
-    .esquerdo, .direita {
-        width: 50%; /* Divide a tela em 50% */
-    }
+.sai {
+    border: none;
 }
+a {
+    text-decoration: none;
+}
+/* Media Queries e Ajustes Responsivos */
 
+/* Ajustes gerais para telas pequenas */
 @media (max-width: 767px) {
     .caixa {
         padding: 20px;
         height: auto; /* Altura automática para permitir que a caixa expanda */
+        margin: 0 auto; /* Centraliza a caixa */
+        min-width: 300px; /* Previne que a caixa fique muito fina */
     }
 
-    .botaun, .butaun {
+    .inputs {
+        margin-bottom: 10px; /* Ajuste de margem para permitir mais espaço */
+    }
+
+    h3 {
+        margin-top: 20px; /* Aumente a margem superior do h3 para melhor espaçamento */
+    }
+
+    .botaun,
+    .butaun {
         margin-top: 10px;
         padding: 15px;
         width: 100%; /* Garante que o botão não ultrapasse o container */
-        max-width: 400px; /* Define um tamanho máximo para o botão */
+        max-width: 100%; /* Remove limite superior para garantir que o botão se ajuste */
         margin: 0 auto; /* Centraliza o botão */
     }
 
@@ -242,13 +265,10 @@ h1 {
         margin-top: 20px; /* Margem superior para separar do conteúdo anterior */
     }
 
-    /* Responsividade de baixo para cima */
-    .inputs {
-        margin-bottom: 10px; /* Ajuste de margem para permitir mais espaço */
-    }
-
-    h3 {
-        margin-top: 20px; /* Aumente a margem superior do h3 para melhor espaçamento */
+    /* Ajustes para esconder elementos não necessários */
+    .a,
+    .b {
+        display: none; /* Esconde elementos não necessários */
     }
 }
 
@@ -261,5 +281,180 @@ h1 {
 
     .caixa {
         padding: 50px; /* Ajuste o preenchimento na caixa */
+    }
+}
+
+/* Responsividade para ajuste de botões */
+@media (max-width: 1400px) {
+    .botaun,
+    .butaun {
+        width: 90%; /* Ajusta a largura dos botões para 90% */
+    }
+    .esquerda {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .botaun,
+    .butaun {
+        width: 80%; /* Ajusta a largura dos botões para 80% */
+    }
+}
+
+@media (max-width: 1000px) {
+    .botaun,
+    .butaun {
+        width: 70%; /* Ajusta a largura dos botões para 70% */
+    }
+}
+
+@media (max-width: 800px) {
+    .botaun,
+    .butaun {
+        width: 60%; /* Ajusta a largura dos botões para 60% */
+    }
+}
+
+@media (max-width: 600px) {
+    .botaun,
+    .butaun {
+        width: 50%; /* Ajusta a largura dos botões para 50% */
+    }
+}
+
+@media (max-width: 400px) {
+    .botaun,
+    .butaun {
+        width: 100%; /* Ajusta a largura dos botões para 100% */
+    }
+}
+
+/* Ajustes para telas médias */
+@media (min-width: 768px) {
+    .esquerdo,
+    .direita {
+        width: 50%; /* Divide a tela em 50% */
+    }
+}
+/* Media Queries e Ajustes Responsivos */
+
+/* Ajustes gerais para telas pequenas */
+@media (max-width: 767px) {
+    .caixa {
+        padding: 20px;
+        height: auto; /* Altura automática para permitir que a caixa expanda */
+        margin: 0 auto; /* Centraliza a caixa */
+        min-width: 300px; /* Previne que a caixa fique muito fina */
+    }
+
+    .inputs {
+        margin-bottom: 10px; /* Ajuste de margem para permitir mais espaço */
+    }
+
+    h3 {
+        margin-top: 20px; /* Aumente a margem superior do h3 para melhor espaçamento */
+    }
+
+    .botaun,
+    .butaun {
+        margin-top: 10px;
+        padding: 15px;
+        width: 100%; /* Garante que o botão não ultrapasse o container */
+        max-width: 100%; /* Remove limite superior para garantir que o botão se ajuste */
+        margin: 0 auto; /* Centraliza o botão */
+    }
+
+    p {
+        width: 100%;
+        text-align: left;
+        margin: 0 auto;
+    }
+
+    /* Ajustes para centralizar a parte direita */
+    .direita {
+        width: 100%; /* Torna a seção direita ocupar toda a largura */
+        display: flex; /* Garante que os elementos internos se comportem corretamente */
+        justify-content: center; /* Centraliza o conteúdo */
+        align-items: center; /* Alinha verticalmente ao centro */
+        margin-top: 20px; /* Margem superior para separar do conteúdo anterior */
+    }
+
+    /* Ajustes para esconder elementos não necessários */
+    .a,
+    .b {
+        display: none; /* Esconde elementos não necessários */
+    }
+}
+
+/* Responsividade de altura a partir de 1600px */
+@media (min-width: 1600px) {
+    .direita {
+        height: auto; /* Permite que a seção direita se ajuste ao conteúdo */
+        padding: 20px; /* Adiciona espaçamento interno */
+    }
+
+    .caixa {
+        padding: 50px; /* Ajuste o preenchimento na caixa */
+    }
+}
+
+/* Responsividade para ajuste de botões */
+@media (max-width: 1400px) {
+    .botaun,
+    .butaun {
+        width: 90%; /* Ajusta a largura dos botões para 90% */
+    }
+
+    .esquerdo {
+        display: none; /* Esconde a seção esquerda */
+    }
+
+    .caixa {
+        margin: 0 auto; /* Centraliza a caixa horizontalmente */
+        width: 90%; /* Ajuste a largura da caixa se necessário */
+    }
+}
+
+@media (max-width: 1200px) {
+    .botaun,
+    .butaun {
+        width: 80%; /* Ajusta a largura dos botões para 80% */
+    }
+}
+
+@media (max-width: 1000px) {
+    .botaun,
+    .butaun {
+        width: 70%; /* Ajusta a largura dos botões para 70% */
+    }
+}
+
+@media (max-width: 800px) {
+    .botaun,
+    .butaun {
+        width: 60%; /* Ajusta a largura dos botões para 60% */
+    }
+}
+
+@media (max-width: 600px) {
+    .botaun,
+    .butaun {
+        width: 50%; /* Ajusta a largura dos botões para 50% */
+    }
+}
+
+@media (max-width: 400px) {
+    .botaun,
+    .butaun {
+        width: 100%; /* Ajusta a largura dos botões para 100% */
+    }
+}
+
+/* Ajustes para telas médias */
+@media (min-width: 768px) {
+    .esquerdo,
+    .direita {
+        width: 50%; /* Divide a tela em 50% */
     }
 }
